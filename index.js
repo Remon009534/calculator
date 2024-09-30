@@ -19,3 +19,9 @@ function calculate()
         screen.value = "Error";
     }
 }
+const btn = document.querySelector('i');
+
+btn.addEventListener('click', function() {
+
+    document.body.classList.toggle('dark-theme')
+})
