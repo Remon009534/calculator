@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&family=Pacifico&family=REM:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body
 {
@@ -8,10 +8,19 @@ body
     min-height: 100vh;
     background-color: #4C4F54;
 }
+body.dark-theme
+{
+    background-color: #00203E;
+}
 ::selection
 {
     background-color: #380F17;
     color: #CD1A30;
+}
+body.dark-theme ::selection
+{
+    background-color: #0BB451;
+    color: #00203E;
 }
 .calculator
 {
@@ -26,7 +35,12 @@ body
     border-radius: 20px;
     height: 380px;
     width: 250px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+body.dark-theme .calculator
+{
+    background-color: #232342;
 }
 .screen
 {
@@ -42,6 +56,12 @@ body
     justify-content: center;
     font-size: 30px;
     color: #252B2B;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+body.dark-theme .screen
+{
+    background-color: #EEEEEE;
+    color: #232342;
 }
 .button
 {
@@ -57,11 +77,21 @@ body
     background-color: #380F17;
     color: #E53030;
 }
+body.dark-theme #equal
+{
+    background-color: #232342;
+    color: #109E4B;
+}
 #equal:hover
 {
     background-color: #E53030;
     color: #380F17;
     transition: all 0.1s ease-in;
+}
+body.dark-theme #equal:hover
+{
+    background-color: #109E4B;
+    color: #232342;
 }
 button
 {
@@ -70,9 +100,8 @@ button
     border-radius: 50px;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    color: darkcyan;
-    background-color: darkslategray;
     border: none;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 button:hover
 {
@@ -83,20 +112,59 @@ button:hover
     background-color: #CD1A30;
     color: white;
 }
+body.dark-theme .item
+{
+    background-color: #109E4B;
+    color: #EEEEEE;
+}
 .item:hover
 {
     background-color: #8F0B13;
     color: white;
     transition: all 0.1s ease-in;
 }
+body.dark-theme .item:hover
+{
+    background-color: #232342;
+    color: #109E4B;
+}
 .calculate
 {
     background-color: #E53030;
     color: white;
+}
+body.dark-theme .calculate
+{
+    background-color: #003E48;
+    color: #EEEEEE;
 }
 .calculate:hover
 {
     background-color: #8F0B13;
     color: white;
     transition: all 0.1s ease-in;
+}
+body.dark-theme .calculate:hover
+{
+    background-color: #232342;
+    color: #0BB451;
+}
+i
+{
+    font-size: 30px;
+    text-align: center;
+    color: #FEE7B5;
+}
+i:hover
+{
+    color: #8F0B13;
+    transition: all 0.2s ease-in-out;
+}
+body.dark-theme i
+{
+    color: #EEEEEE;
+}
+body.dark-theme i:hover
+{
+    color: #232342;
 }
